@@ -1,0 +1,282 @@
+
+body{
+    background-color: cadetblue;
+    background-image: url('../imagens/ondas-abstratas.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px 20px;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Averia Gruesa Libre', cursive
+}
+
+
+/* menu */
+nav{
+    width: 50%;
+    float: right;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 10px 10px 0 ;
+}
+
+nav li a{
+    display: block;
+    padding: 9px;
+    margin: 0 8px 0 0;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+/*  */
+
+
+/* formatação do cabeçalho */
+header{
+    border-bottom: 1px solid #444;
+    height: 80px;
+}
+/*  */
+
+
+/* logotipo */
+header h1{
+    padding: 5px;
+    background-color: darkgreen;
+    color: #fff;
+    width: fit-content;
+    float: left;
+}
+/*  */
+
+
+/* regra para float,sempre usar clear nos elementos a seguir */
+main{
+    clear:both;
+}
+/*  */
+
+
+/* copyright */
+footer{
+    clear: both;
+    border-top: 1px solid #555;
+    margin: 40px 0;
+    
+}
+
+footer p{
+    border: 0;
+    padding: 10px 0 5px 5px;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+footer a:hover{
+    color: aqua;
+    border: 1px solid black;
+    background-color: black;
+}
+
+/*  */
+
+
+/* foto e resumo da bio */
+aside ,section{
+    border: 1px solid #555;
+    padding: 10px;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.6)
+}
+
+aside{
+    width: 30%;
+    float: left;
+}
+
+section{
+    width: 66%;
+    float: right;
+}
+
+aside img{
+    width: 100%;
+}
+
+aside figure{
+    margin: 0;
+}
+
+aside a{
+    text-decoration: none;
+}
+
+/*  */
+
+
+
+/* Regras de Classes sempre use . para chamar a classe */
+.fala{
+    font-style: italic;
+    font-weight: 600;
+}
+/*  */
+
+
+
+/* Modal */
+.popup{
+    position: fixed;
+    bottom: 20px;
+    right: -400px;
+    width: 300px;
+    padding: 10px;
+    background-color: burlywood;
+    border: 4px solid #fff;
+    box-shadow: 3px 3px 3px #444;
+}
+.slide-left {
+	-webkit-animation: slide-left 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+	        animation: slide-left 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
+}
+
+ @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-450px);
+              transform: translateX(-450px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-450px);
+              transform: translateX(-450px);
+    }
+  }
+  
+  /* texto */
+
+  .tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+.fechar{
+    position: absolute;
+    right: -34px;
+    top: 0px;
+    background-color: red;
+    color: #fff;
+    padding: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+}
+/*  */
+
+
+/* Regras para mobile e telas pequenas */
+
+ /* layout em celulares e tablets,telas menores que 1200px  */
+
+@media screen and (max-width: 1199px) {
+    header{
+        height: 120px;
+    }
+    
+    header h1, header nav, aside, section{
+        float: none;
+        width: 96%;    
+    }
+
+} 
+/* Celular */
+@media screen and (max-width: 600px) {
+    header{
+        height: 215px;
+    }
+    
+    header h1, header nav, aside, section{
+        float: none;
+        width: 96%;    
+    }
+} 
+
+ /* layout para impressão */
+ @media print {
+    /* define tamanho de leitura para 10pt */
+    body{
+        font-size: 10pt;
+    }
+    h1{
+        font-size: 16pt;
+    }
+    h2{
+        font-size: 14pt;
+    }
+
+    @page{
+        margin: 1cm;
+        size: A4;
+    }
+ }
+/*  */
